@@ -1,6 +1,6 @@
 package baitap5;
 
-public class PhuThuy extends NhanVat{
+public class PhuThuy extends NhanVat implements DiChuyen, TanCong{
     private int luongMana;
     private String cauThanChu;
 
@@ -46,6 +46,34 @@ public class PhuThuy extends NhanVat{
 
     public void phuPhep(){
         System.out.println(this.getTen() + " sử dụng câu thần chú " + this.getCauThanChu() + "  để phù phép!");
+    }
+    @Override
+    public void sangPhai() {
+        System.out.println("Phù thuỷ cầm chổi sang Phải!");
+    }
 
+    @Override
+    public void sangTrai() {
+        System.out.println("Phù thuỷ cầm chổi sang Trái!");
+    }
+
+    @Override
+    public void nhayLen() {
+        System.out.println("Phù thuỷ cầm chổi Nhảy lên!");
+    }
+
+    @Override
+    public void boChay() {
+        System.out.println("Phù thuỷ cầm chổi bỏ chạy!");
+    }
+
+    @Override
+    public void tanCongKhongVuKhi() {
+        System.out.println("Phù thuỷ bay không cần chổi và đã ngã!");
+    }
+
+    @Override
+    public void tanCongCoVuKhi() {
+        System.out.println("Phù thuỷ bay có chổi nên rất chi là mood!");
     }
 }

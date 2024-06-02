@@ -1,6 +1,6 @@
 package baitap5;
 
-public class KiemKhach extends NhanVat {
+public class KiemKhach extends NhanVat implements DiChuyen, TanCong {
     private int diemKinhNghiem;
     private String thuatDauKiem;
 
@@ -46,5 +46,34 @@ public class KiemKhach extends NhanVat {
     @Override
     protected void sucManh() {
         System.out.println("Có sức mạnh với kinh nghiệm: " + diemKinhNghiem);
+    }
+    @Override
+    public void sangPhai() {
+        System.out.println("Kiếm khách cầm kiếm sang Phải!");
+    }
+
+    @Override
+    public void sangTrai() {
+        System.out.println("Kiếm khách cầm kiếm sang Trái!");
+    }
+
+    @Override
+    public void nhayLen() {
+        System.out.println("Kiếm khách cầm kiếm Nhảy lên!");
+    }
+
+    @Override
+    public void boChay() {
+        System.out.println("Kiếm khách cầm kiếm bỏ chạy!");
+    }
+
+    @Override
+    public void tanCongKhongVuKhi() {
+        System.out.println("Kiếm khách chơi lớn với việc tấn công không cần vũ khí");
+    }
+
+    @Override
+    public void tanCongCoVuKhi() {
+        System.out.println("Kiếm khách sợ nên cần vũ khí!");
     }
 }

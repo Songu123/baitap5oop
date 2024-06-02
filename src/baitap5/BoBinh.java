@@ -1,6 +1,6 @@
 package baitap5;
 
-public class BoBinh extends NhanVat{
+public class BoBinh extends NhanVat implements DiChuyen, TanCong{
     private int sucManhPhongThu;
     private String giap;
 
@@ -47,5 +47,34 @@ public class BoBinh extends NhanVat{
 
     public void phongThu(){
         System.out.println(this.getTen() + " đang sử dụng " + this.giap + " với sức mạnh " + this.getSucManhPhongThu() + " để phòng thử!");
+    }
+    @Override
+    public void sangPhai() {
+        System.out.println("Bộ binh cầm khiên sang Phải!");
+    }
+
+    @Override
+    public void sangTrai() {
+        System.out.println("Bộ binh cầm khiên sang Trái!");
+    }
+
+    @Override
+    public void nhayLen() {
+        System.out.println("Bộ binh cầm khiên Nhảy lên!");
+    }
+
+    @Override
+    public void boChay() {
+        System.out.println("Bộ binh cầm khiên bỏ chạy!");
+    }
+
+    @Override
+    public void tanCongKhongVuKhi() {
+        System.out.println("Bộ binh nói không với vũ khí!");
+    }
+
+    @Override
+    public void tanCongCoVuKhi() {
+        System.out.println("Bộ binh có vũ khí mới chơi được!");
     }
 }

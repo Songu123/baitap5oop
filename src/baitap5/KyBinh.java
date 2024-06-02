@@ -1,6 +1,6 @@
 package baitap5;
 
-public class KyBinh extends NhanVat {
+public class KyBinh extends NhanVat implements DiChuyen, TanCong{
     private String ngua;
     private int tocDo;
 
@@ -46,5 +46,35 @@ public class KyBinh extends NhanVat {
     }
     public void xongPha(){
         System.out.println(this.getTen() + " đang xông pha nhanh chóng trên " + this.getNgua());
+    }
+
+    @Override
+    public void sangPhai() {
+        System.out.println("Cưỡi ngựa sang Phải!");
+    }
+
+    @Override
+    public void sangTrai() {
+        System.out.println("Cưỡi ngựa sang Trái!");
+    }
+
+    @Override
+    public void nhayLen() {
+        System.out.println("Cưỡi ngựa Nhảy lên!");
+    }
+
+    @Override
+    public void boChay() {
+        System.out.println("Cưỡi ngựa bỏ chạy!");
+    }
+
+    @Override
+    public void tanCongKhongVuKhi() {
+        System.out.println("Kỵ binh nói không với ngựa!");
+    }
+
+    @Override
+    public void tanCongCoVuKhi() {
+        System.out.println("Kỵ binh nói có với ngựa!");
     }
 }
